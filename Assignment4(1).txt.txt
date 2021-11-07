@@ -1,0 +1,14 @@
+Q.  How to compare two JSON have the same properties without order?
+a. var obj1 = { name: "Person 1", age:5 };
+b. var obj2 = { age:5, name: "Person 1" };
+
+CODE:
+var obj1 = { name: "Person 1", age:5 };
+var obj2 = { age:5, name: "Person 1" };
+
+_.isEqual(obj1, obj2)  //True
+
+var obj3 = { name: "Person 1", age:5, pin:2525};
+var obj4 = { age:5, name: "Person 1" };
+
+_.isEqual(obj3, obj4) //False
